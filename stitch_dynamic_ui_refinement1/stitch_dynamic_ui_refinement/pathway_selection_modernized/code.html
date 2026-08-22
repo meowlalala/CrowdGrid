@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Crowdgrid - Pathway Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#003cae",
+                        "secondary-fixed-dim": "#ffb690",
+                        "on-primary-fixed": "#00164e",
+                        "tertiary": "#005277",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#193053",
+                        "surface-variant": "#d6e3ff",
+                        "pilgrim-sky": "#0EA5E9",
+                        "surface-dim": "#c9dbff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#2d5bd7",
+                        "surface-tint": "#F0F3FF",
+                        "corporate-indigo": "#2D5BD7",
+                        "on-background": "#001b3d",
+                        "inverse-primary": "#b5c4ff",
+                        "background": "#f9f9ff",
+                        "surface-container-high": "#dfe8ff",
+                        "on-surface-variant": "#434654",
+                        "primary-fixed-dim": "#b5c4ff",
+                        "surface-bright": "#f9f9ff",
+                        "on-primary": "#ffffff",
+                        "primary": "#0041bc",
+                        "on-secondary-fixed": "#341100",
+                        "surface-container-low": "#f0f3ff",
+                        "tertiary-container": "#006b9a",
+                        "gathering-orange": "#F97316",
+                        "tertiary-fixed": "#c9e6ff",
+                        "surface": "#f9f9ff",
+                        "inverse-on-surface": "#ecf0ff",
+                        "secondary-container": "#fd761a",
+                        "surface-container": "#e8eeff",
+                        "on-primary-container": "#dce2ff",
+                        "on-surface": "#001b3d",
+                        "on-secondary-fixed-variant": "#783200",
+                        "on-tertiary-container": "#c8e6ff",
+                        "on-tertiary-fixed": "#001e2f",
+                        "success-emerald": "#10B981",
+                        "tertiary-fixed-dim": "#89ceff",
+                        "surface-container-highest": "#d6e3ff",
+                        "secondary-fixed": "#ffdbca",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#004c6e",
+                        "secondary": "#9d4300",
+                        "primary-fixed": "#dce1ff",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#5c2400",
+                        "outline-variant": "#c4c5d6",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "outline": "#747685",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "xl": "48px",
+                        "lg": "32px",
+                        "margin-mobile": "16px",
+                        "xs": "8px",
+                        "md": "24px",
+                        "sm": "16px"
+                    },
+                    "fontFamily": {
+                        "button": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(196, 198, 207, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim docked full-width top-0 border-b border-outline-variant dark:border-outline flat no shadows flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 sticky z-50">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="grid_view">grid_view</span>
+<span class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary tracking-tight">CROWDGRID</span>
+</div>
+<div>
+<button class="text-button font-button text-primary dark:text-inverse-primary hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors px-4 py-2 rounded-lg flex items-center gap-2">
+                IRCTC Login
+                <span class="material-symbols-outlined text-[18px]">login</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow px-margin-mobile md:px-margin-desktop py-lg max-w-7xl mx-auto w-full">
+<div class="text-center mb-xl">
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg mb-sm">Select Your Journey</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">Choose a pathway to access tailored services, event management, and secure bookings.</p>
+</div>
+<!-- Pathways Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-xl">
+<!-- Pilgrim Pathway -->
+<button class="group glass-card rounded-xl p-md flex flex-col items-start text-left transition-all hover:shadow-[0_8px_30px_rgba(45,91,215,0.1)] hover:-translate-y-1 relative overflow-hidden border border-outline-variant/50">
+<div class="absolute inset-0 bg-pilgrim-sky/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-xl h-xl rounded-lg bg-pilgrim-sky/10 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-pilgrim-sky text-[32px]">church</span>
+</div>
+<h2 class="text-headline-md font-headline-md mb-xs group-hover:text-pilgrim-sky transition-colors">Pilgrim</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-md flex-grow">Access specialized routes, accommodations, and secure travel arrangements for religious journeys.</p>
+<div class="flex items-center text-pilgrim-sky font-button text-button mt-auto">
+<span>Enter Pathway</span>
+<span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</button>
+<!-- Gathering Pathway -->
+<button class="group glass-card rounded-xl p-md flex flex-col items-start text-left transition-all hover:shadow-[0_8px_30px_rgba(249,115,22,0.1)] hover:-translate-y-1 relative overflow-hidden border border-outline-variant/50">
+<div class="absolute inset-0 bg-gathering-orange/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-xl h-xl rounded-lg bg-gathering-orange/10 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-gathering-orange text-[32px]">groups</span>
+</div>
+<h2 class="text-headline-md font-headline-md mb-xs group-hover:text-gathering-orange transition-colors">Public Gathering</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-md flex-grow">Manage large-scale events, coordinate logistics, and ensure crowd safety protocols.</p>
+<div class="flex items-center text-gathering-orange font-button text-button mt-auto">
+<span>Enter Pathway</span>
+<span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</button>
+<!-- Corporate Pathway -->
+<button class="group glass-card rounded-xl p-md flex flex-col items-start text-left transition-all hover:shadow-[0_8px_30px_rgba(45,91,215,0.1)] hover:-translate-y-1 relative overflow-hidden border border-outline-variant/50">
+<div class="absolute inset-0 bg-corporate-indigo/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-xl h-xl rounded-lg bg-corporate-indigo/10 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-corporate-indigo text-[32px]">business_center</span>
+</div>
+<h2 class="text-headline-md font-headline-md mb-xs group-hover:text-corporate-indigo transition-colors">Corporate</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-md flex-grow">Streamline business travel, manage corporate bookings, and access administrative tools.</p>
+<div class="flex items-center text-corporate-indigo font-button text-button mt-auto">
+<span>Enter Pathway</span>
+<span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</button>
+</div>
+<!-- Verification Portal -->
+<div class="bg-surface-container-low rounded-xl p-lg border border-outline-variant/50 flex flex-col md:flex-row items-center justify-between gap-md">
+<div>
+<h3 class="text-headline-md font-headline-md mb-xs flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+                    Verification Portal
+                </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Already have a booking? Verify your status or manage existing reservations.</p>
+</div>
+<button class="bg-primary-container text-on-primary bg-primary hover:opacity-90 transition-opacity rounded-lg px-6 py-3 font-button text-button whitespace-nowrap flex items-center gap-2">
+                Verify Booking
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="bg-surface dark:bg-surface-dim fixed bottom-0 w-full z-50 border-t border-outline-variant dark:border-outline bg-surface/90 backdrop-blur-md shadow-lg dark:shadow-none flex justify-around items-center w-full py-3 px-4 md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline opacity-70 hover:text-primary dark:hover:text-inverse-primary">
+<span class="material-symbols-outlined mb-1 text-[24px]">church</span>
+<span class="text-label-md font-label-md">Pilgrim</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline opacity-70 hover:text-primary dark:hover:text-inverse-primary">
+<span class="material-symbols-outlined mb-1 text-[24px]">groups</span>
+<span class="text-label-md font-label-md">Gathering</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline opacity-70 hover:text-primary dark:hover:text-inverse-primary">
+<span class="material-symbols-outlined mb-1 text-[24px]">business_center</span>
+<span class="text-label-md font-label-md">Corporate</span>
+</button>
+</nav>
+</body></html>

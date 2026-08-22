@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CROWDGRID - Corporate Workflow</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#003cae",
+                    "secondary-fixed-dim": "#ffb690",
+                    "on-primary-fixed": "#00164e",
+                    "tertiary": "#005277",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#193053",
+                    "surface-variant": "#d6e3ff",
+                    "pilgrim-sky": "#0EA5E9",
+                    "surface-dim": "#c9dbff",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#2d5bd7",
+                    "surface-tint": "#F0F3FF",
+                    "corporate-indigo": "#2D5BD7",
+                    "on-background": "#001b3d",
+                    "inverse-primary": "#b5c4ff",
+                    "background": "#f9f9ff",
+                    "surface-container-high": "#dfe8ff",
+                    "on-surface-variant": "#434654",
+                    "primary-fixed-dim": "#b5c4ff",
+                    "surface-bright": "#f9f9ff",
+                    "on-primary": "#ffffff",
+                    "primary": "#0041bc",
+                    "on-secondary-fixed": "#341100",
+                    "surface-container-low": "#f0f3ff",
+                    "tertiary-container": "#006b9a",
+                    "gathering-orange": "#F97316",
+                    "tertiary-fixed": "#c9e6ff",
+                    "surface": "#f9f9ff",
+                    "inverse-on-surface": "#ecf0ff",
+                    "secondary-container": "#fd761a",
+                    "surface-container": "#e8eeff",
+                    "on-primary-container": "#dce2ff",
+                    "on-surface": "#001b3d",
+                    "on-secondary-fixed-variant": "#783200",
+                    "on-tertiary-container": "#c8e6ff",
+                    "on-tertiary-fixed": "#001e2f",
+                    "success-emerald": "#10B981",
+                    "tertiary-fixed-dim": "#89ceff",
+                    "surface-container-highest": "#d6e3ff",
+                    "secondary-fixed": "#ffdbca",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#004c6e",
+                    "secondary": "#9d4300",
+                    "primary-fixed": "#dce1ff",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#5c2400",
+                    "outline-variant": "#c4c5d6",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "outline": "#747685",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "unit": "4px",
+                    "gutter": "24px",
+                    "xl": "48px",
+                    "lg": "32px",
+                    "margin-mobile": "16px",
+                    "xs": "8px",
+                    "md": "24px",
+                    "sm": "16px"
+            },
+            "fontFamily": {
+                    "button": [
+                            "Inter"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Inter"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "button": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-md": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f9f9ff;
+            color: #001b3d;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid #c4c5d6;
+            box-shadow: 0 10px 40px -10px rgba(45, 91, 215, 0.1);
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: 24px;
+        }
+        
+        .bento-item-full { grid-column: span 12; }
+        .bento-item-half { grid-column: span 12; }
+        @media (min-width: 768px) {
+            .bento-item-half { grid-column: span 6; }
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col bg-background selection:bg-surface-variant selection:text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim docked full-width top-0 border-b border-outline-variant dark:border-outline flat no shadows flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 z-40 relative">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="grid_view">grid_view</span>
+<span class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary tracking-tight">CROWDGRID</span>
+</div>
+<!-- Desktop Nav (Hidden on Mobile) -->
+<nav class="hidden md:flex items-center gap-md">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant text-button font-button hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors px-4 py-2 rounded-lg opacity-80 hover:opacity-100" href="#">
+<span>Pilgrim</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant text-button font-button hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors px-4 py-2 rounded-lg opacity-80 hover:opacity-100" href="#">
+<span>Gathering</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary font-bold text-button font-button bg-surface-container-high dark:bg-surface-container-highest transition-colors px-4 py-2 rounded-lg" href="#">
+<span>Corporate</span>
+</a>
+</nav>
+<div class="flex items-center">
+<button class="text-button font-button text-primary dark:text-inverse-primary hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors px-4 py-2 rounded-lg flex items-center gap-2">
+                IRCTC Login
+            </button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 overflow-y-auto px-margin-mobile md:px-margin-desktop py-lg pb-32">
+<div class="max-w-6xl mx-auto bento-grid">
+<!-- Header Section -->
+<div class="bento-item-full mb-md">
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-on-background mb-unit">Corporate Workflow Gateway</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">Secure access and event management for enterprise delegates.</p>
+</div>
+<!-- Private Code Login Card -->
+<div class="bento-item-half glass-card rounded-xl p-md flex flex-col justify-between hover:bg-surface-container-lowest transition-colors group">
+<div>
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-md group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="vpn_key">vpn_key</span>
+</div>
+<h2 class="text-headline-md font-headline-md text-on-background mb-xs">Private Code Login</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-md">Enter your enterprise access code to view restricted corporate schedules and venue access passes.</p>
+<div class="relative mb-lg">
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Enter Access Code" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline-variant" data-icon="lock">lock</span>
+</div>
+</div>
+<button class="w-full bg-corporate-indigo text-on-primary text-button font-button py-3 rounded-lg hover:bg-primary-container/90 transition-colors flex items-center justify-center gap-2 shadow-sm">
+                    Authenticate
+                    <span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Event Details Overview Card -->
+<div class="bento-item-half glass-card rounded-xl p-md flex flex-col relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+<div class="flex items-start justify-between mb-md relative z-10">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="event_note">event_note</span>
+</div>
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full text-label-md font-label-md">Upcoming</span>
+</div>
+<div class="relative z-10 flex-1">
+<h2 class="text-headline-md font-headline-md text-on-background mb-xs">Global Tech Summit '24</h2>
+<div class="space-y-3 mt-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline" data-icon="calendar_month">calendar_month</span>
+<div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Date</p>
+<p class="text-body-md font-body-md text-on-background font-semibold">October 24, 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline" data-icon="location_on">location_on</span>
+<div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Venue</p>
+<p class="text-body-md font-body-md text-on-background font-semibold">Grand Hall, Block A</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline" data-icon="group">group</span>
+<div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Delegates</p>
+<p class="text-body-md font-body-md text-on-background font-semibold">450+ Confirmed</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-lg border-t border-outline-variant pt-md relative z-10 flex justify-between items-center">
+<p class="text-label-md font-label-md text-on-surface-variant uppercase">Status: Finalizing Setup</p>
+<button class="text-corporate-indigo text-button font-button hover:bg-surface-container-high px-4 py-2 rounded-lg transition-colors flex items-center gap-1">
+                        View Details
+                        <span class="material-symbols-outlined text-[18px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Global Action Bar -->
+<div class="bento-item-full glass-card rounded-xl p-md mt-sm flex flex-col md:flex-row items-center justify-between gap-md border-l-4 border-l-corporate-indigo">
+<div>
+<h3 class="text-body-lg font-body-lg text-on-background font-semibold">Ready to begin the corporate workflow?</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Ensure all delegates have received their access codes before proceeding.</p>
+</div>
+<button class="w-full md:w-auto bg-corporate-indigo text-on-primary text-button font-button px-8 py-3 rounded-lg hover:bg-primary-container/90 transition-colors shadow-sm flex items-center justify-center gap-2 whitespace-nowrap">
+                    Acknowledge &amp; Proceed
+                    <span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-surface dark:bg-surface-dim fixed bottom-0 w-full z-50 border-t border-outline-variant dark:border-outline bg-surface/90 backdrop-blur-md shadow-lg dark:shadow-none flex justify-around items-center w-full py-3 px-4">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline opacity-70 hover:text-primary dark:hover:text-inverse-primary w-1/3" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]" data-icon="church">church</span>
+<span class="text-label-md font-label-md">Pilgrim</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline opacity-70 hover:text-primary dark:hover:text-inverse-primary w-1/3" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]" data-icon="groups">groups</span>
+<span class="text-label-md font-label-md">Gathering</span>
+</a>
+<!-- Active Tab -->
+<a class="flex flex-col items-center justify-center text-on-primary-fixed-variant dark:text-inverse-primary font-bold scale-110 transition-transform w-1/3 active-tab group" href="#">
+<div class="bg-primary-container/10 px-4 py-1 rounded-full mb-1 group-hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-[24px]" data-icon="business_center" style="font-variation-settings: 'FILL' 1;">business_center</span>
+</div>
+<span class="text-label-md font-label-md text-primary">Corporate</span>
+</a>
+</nav>
+</body></html>
